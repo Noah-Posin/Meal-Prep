@@ -28,6 +28,11 @@ public class student {
         transaction t = new transaction(month, day, -7);
         transactions.add(t);
     }
+    public void addBalance(int month, int day,  double money){
+        balance+=money;
+        transaction t =new transaction(month, day, money);
+        transactions.add(t);
+    }
 
     
     public ArrayList<transaction> getTransactionsByDate(int month, int day){
@@ -49,6 +54,6 @@ public class student {
 
 
 public String toString(){
-    return ("name: "+name+ " ID: " +id + " Balance: "+balance + "Transactions: " + transactions);
+    return ("name: "+name+ " ID: " +id + " Balance: "+balance + " Transactions: " + transactions);
 }
 }
